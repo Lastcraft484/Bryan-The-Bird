@@ -49,18 +49,6 @@ async def down(ctx):
     await ctx.send(" <@296444389990072320> will show you the way")
 
 
-@bot.command()
-async def rules(ctx):
-    embed=discord.Embed(title="rules", url="https://www.youtube.com/watch?v=dQw4w9WgXcQ", description="follow these and don't do bad", color=0xeee657)
-    embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/620747650207055882/627124887001104394/cat_wip.jpg")
-
-    embed.add_field(name="1)", value="don't dox", inline=False)
-    embed.add_field(name="2)", value="Cat is stupid and fat", inline=False)
-    embed.add_field(name="3)", value="no hamilton or you get shot because we only tolerate thrash metal in this house", inline=False)
-    embed.add_field(name="Server Three(5/5)", value="Server ID :Minecraftgang112211 Password: Aidan112211", inline=False)
-    embed.add_field(name="Server Four(1/5)", value="Server ID :MinecraftServer484112211 Password: Aidan112211", inline=False)
-    embed.set_footer(text="Join Any open Server then to get the Server IP for any of our servers do ?help and find the server you want to join")
-
     await ctx.send(embed=embed)
 
 
@@ -74,7 +62,7 @@ async def skyfactory(ctx):
 
 
 
-    embed.add_field(name="Server Ip", value="25.71.20.230:25565", inline=False)
+    embed.add_field(name="Server Ip", value="[redacted]]", inline=False)
 
     await ctx.send(embed=embed)
 
@@ -106,25 +94,6 @@ async def help(ctx):
 
     
 
-@bot.command()
-async def birthday(ctx):
-    embed=discord.Embed(title="Birthdays", description="All 5 of the gang members Birthdays ", color=0xeee657)
-    embed.add_field(name="Jacob", value="May 28", inline=False)
-    embed.add_field(name="John", value="April 28", inline=True)
-    embed.add_field(name="Aidan", value="April 8", inline=True)
-    embed.add_field(name="Adam" , value="January 15", inline=True)
-    embed.add_field(name="Pepe", value="July 23", inline=True)
-    await ctx.send(embed=embed)
-
-@bot.command()
-async def wifi(ctx):
-    embed=discord.Embed(title="Wifi Passwords", description="All 5 of the gang members Wifi Passwords ", color=0xeee657)
-    embed.add_field(name="Jacob", value="dftp2525", inline=False)
-    embed.add_field(name="John", value="7116445358", inline=True)
-    embed.add_field(name="Aidan", value="aidanrileyjack", inline=True)
-    embed.add_field(name="Adam" , value="heavyshrub699", inline=True)
-    embed.add_field(name="Pepe", value="Fair1035", inline=True)
-    await ctx.send(embed=embed)
 
 @bot.command()
 async def invite(ctx):
