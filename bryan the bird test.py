@@ -69,7 +69,25 @@ async def reqcoord(ctx, *, search):
                 
                 await ctx.send("No Coords Have Been Recorded Of That Location")
 
+@bot.command()
+async def giphy(ctx, *, search):
+    embed = discord.Embed(colour=discord.Colour.blue())
+    session = aiohttp.ClientSession()
 
+    if search == '':
+        response = await session.get('https://api.giphy.com/v1/gifs/random?api_key=API_KEY_GOES_HERE')
+        embed.set_image(url=data['data']['images']['original']['url'])
+    else:
+        search.replace(' ', '+')
+        response = await session.get('http://api.giphy.com/v1/gifs/search?q=' + search + '&api_key=API_KEY_GOES_HERE&limit=10')
+        gif_choice = random.randint(0, 9)
+        embed.set_image(url=data['data'][gif_choice]['images']['original']['url'])
+
+    data = json.loads(await response.text())
+    await session.close()
+
+    await client.send_message(embed=embed)
+    
 if __name__ == '__main__':
     import config
     bot.run(config.token)
