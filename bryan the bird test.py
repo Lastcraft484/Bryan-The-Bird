@@ -21,9 +21,9 @@ async def on_ready():
 async def brozart(ctx):
     await ctx.send(file=discord.File('brozart.jpg'))
 
-@bot.command()
-async def invite(ctx):
-    await ctx.send('invite link: (your server invite)')
+# @bot.command()
+# async def serverinvite(ctx):
+#   await ctx.send('invite link: (your server invite)')
 
 @bot.command()
 async def coords(ctx, xCoord: str, yCoord: str, zCoord: str, nameCoord: str = None):
@@ -38,6 +38,9 @@ async def coords(ctx, xCoord: str, yCoord: str, zCoord: str, nameCoord: str = No
         print(e)
         await ctx.send("Something went wrong.")
 
+
+
+
 @bot.command()
 async def Test (ctx):
     embed=discord.Embed(title="your title", description="your discription ", color=0xeee657)
@@ -46,6 +49,16 @@ async def Test (ctx):
     embed.add_field(name="test", value="embed 3", inline=True)
     embed.add_field(name="test" , value="embed 4", inline=True)
     embed.add_field(name="test", value="embed 5", inline=True)
+    await ctx.send(embed=embed)
+
+bot.remove_command('invite')
+
+@bot.command()
+async def invite(ctx):
+    
+    embed = discord.Embed(title="Invite Link", url="(put your discord bot link here)", description="Here you can invite me to your server", color=0xeee657)
+    embed.set_thumbnail(url="https://upload.wikimedia.org/wikipedia/commons/f/f3/Erithacus_rubecula_with_cocked_head.jpg")
+    embed.add_field(name="Requirements", value="(put the requirements you want to allow your bot)", inline=False)
     await ctx.send(embed=embed)
 
 @bot.command()
@@ -69,6 +82,7 @@ async def reqcoord(ctx, *, search):
                 
                 await ctx.send("No Coords Have Been Recorded Of That Location")
 
+
 @bot.command()
 async def giphy(ctx, *, search):
     embed = discord.Embed(colour=discord.Colour.blue())
@@ -86,7 +100,7 @@ async def giphy(ctx, *, search):
     data = json.loads(await response.text())
     await session.close()
 
-    await client.send_message(embed=embed)
+    await ctx.send_message(embed=embed)
    
 @bot.command(pass_context=True)
 async def youtube(ctx, *search):
@@ -95,6 +109,7 @@ async def youtube(ctx, *search):
     htm_content = urllib.request.urlopen('https://www.youtube.com/results?' + query_string)
     search_results = re.findall('href=\"\\/watch\\?v=(.{11})', htm_content.read().decode())
     await ctx.send('http://www.youtube.com/watch?v=' + search_results[0])
+
 
 if __name__ == '__main__':
     import config
