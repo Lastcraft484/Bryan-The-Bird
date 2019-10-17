@@ -21,6 +21,12 @@ async def on_ready():
 async def brozart(ctx):
     await ctx.send(file=discord.File('brozart.jpg'))
 
+@bot.command()
+async def coord(ctx):
+    await ctx.send(file=discord.File('coords.txt'))
+
+
+
 # @bot.command()
 # async def serverinvite(ctx):
 #   await ctx.send('invite link: (your server invite)')
