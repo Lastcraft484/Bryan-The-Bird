@@ -23,7 +23,9 @@ async def brozart(ctx):
 
 @bot.command()
 async def coord(ctx):
-    await ctx.send(file=discord.File('coords.txt'))
+    with open('coords.txt') as f:
+        await ctx.send(f.read())
+
 
 
 
