@@ -68,7 +68,7 @@ async def level_up(users, user, channel):
         await ctx.send_message(channel, f":tada: Congrats {user.mention}, you levelled up to level {lvl_end}!")
         users[user.id]["level"] = lvl_end
 
-    
+
 
 
 @bot.command()
