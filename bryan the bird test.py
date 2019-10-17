@@ -26,6 +26,12 @@ async def coord(ctx):
     with open('coords.txt') as f:
         await ctx.send(f.read())
 
+#un comment this to replace the command above. this command sends the text file instead of the contents. 
+# This is useful when the contents of the text file goes over 2000 because after than discord gets angry
+#@bot.command()
+#async def coord(ctx):
+#   await ctx.send(file=discord.File('coords.txt'))
+
 
 
 
