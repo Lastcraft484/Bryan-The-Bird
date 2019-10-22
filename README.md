@@ -1,3 +1,5 @@
+https://img.shields.io/discord/632704566575759383?color=%23375b79&label=Discord%20Server
+
 # Bryan the Bird
 
 Discord bot with various features
