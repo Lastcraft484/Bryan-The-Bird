@@ -1,4 +1,3 @@
-![Discord](https://img.shields.io/discord/632704566575759383?color=375b79&label=Discord%20Server)
 
 # Bryan the Bird
 
