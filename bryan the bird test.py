@@ -34,6 +34,7 @@ async def coord(ctx):
 
 
 
+#this command send the server invite, Just un comment this is and replace the text in between the '' and place your server invite to make the command function.
 
 # @bot.command()
 # async def serverinvite(ctx):
@@ -73,7 +74,7 @@ async def level_up(users, user, channel):
     lvl_end = int(experience ** (1/4))
 
     if lvl_start < lvl_end:
-        await ctx.send_message(channel, f":tada: Congrats {user.mention}, you levelled up to level {lvl_end}!")
+        await message.send_message(channel, f":tada: Congrats {user.mention}, you levelled up to level {lvl_end}!")
         users[user.id]["level"] = lvl_end
 
 
