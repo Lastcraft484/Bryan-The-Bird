@@ -142,4 +142,4 @@ async def giphy(ctx, *, search):
     await client.send_message(embed=embed)
 
 
-bot.run('NTk0NjYxOTI3ODQyNzQyMzA0.XRgYCQ.jB6bqDs42S34l8GKgsSZc8O3Q0s')
+bot.run('BOT TOKEN')
