@@ -169,4 +169,3 @@ async def youtube(ctx, *search):
 if __name__ == '__main__':
     import config
     bot.run(config.token)
-
