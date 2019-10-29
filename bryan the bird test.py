@@ -76,7 +76,11 @@ async def coord(ctx):
 #       await channel.send(f":tada: Congrats {user.mention}, you levelled up to level {lvl_end}!")
 #        users[str(user.id)]["level"] = lvl_end
 
-
+#very simple text censorship[able to be repeated for diffrent words]
+@bot.event
+async def on_message(message):
+    if 'Aidan' in message.content:
+        await message.delete() 
 
 
 @bot.command()
