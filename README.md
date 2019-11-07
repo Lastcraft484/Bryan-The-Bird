@@ -3,6 +3,8 @@
 
 Discord bot with various features
 
+## Beta branch 
+
 ## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the requirements (listed in requirements.txt)
