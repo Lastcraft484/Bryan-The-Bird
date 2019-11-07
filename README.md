@@ -7,14 +7,15 @@ Discord bot with various features
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the requirements (listed in requirements.txt)
 
-```bash
-pip install -U -r requirements.txt
-```
 
 ## Requirements
 [Python 3.6 or higher](https://www.python.org/downloads/release/python-360/)
 
-Then cd into the unzipped folder and run the pip command from above
+```bash
+pip install -U -r requirements.txt
+```
+[requirements.txt is still wip and will not be filled until requiremets are complete(for now install the required packages listed in code)]
+Then cd into the unzipped folder and run the pip command from above.
 Next create a config.py and copy the exact text from the text below[do not leave anything blank]
 Then run bot.py how ever you want and you should be all set
 
