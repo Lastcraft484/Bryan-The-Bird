@@ -77,10 +77,18 @@ async def coord(ctx):
 #        users[str(user.id)]["level"] = lvl_end
 
 #very simple text censorship[able to be repeated for diffrent words]
+
 @bot.event
 async def on_message(message):
-    if 'Aidan' in message.content:
-        await message.delete() 
+    with open('censor.txt') as f:
+        for line in f:
+            if line.endswith(f'{}\n'):
+                
+                break
+            
+        else:
+                
+                await message.delete() 
 
 
 @bot.command()
